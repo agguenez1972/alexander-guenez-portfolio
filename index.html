@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Alexander G. Gueñez — Sales Representative</title>
+  <meta name="description" content="Portfolio & resume site for Alexander G. Gueñez — Sales Representative" />
+  <style>
+    :root{
+      --bg:#f3f6fb;
+      --card:#ffffff;
+      --accent:#0b6efd;
+      --muted:#6b7280;
+      --maxw:1100px;
+      --radius:12px;
+    }
+    *{box-sizing:border-box}
+    body{
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      line-height:1.5;
+      margin:0;
+      padding:28px;
+      background:var(--bg);
+      color:#0f172a;
+    }
+    .container{max-width:var(--maxw);margin:0 auto}
+    .card{background:var(--card);padding:20px;border-radius:var(--radius);box-shadow:0 8px 30px rgba(2,6,23,0.06);}
+
+    header{display:flex;flex-direction:column;align-items:center;gap:12px;margin-bottom:18px}
+    .photo-container{display:flex;justify-content:center;align-items:center}
+    .photo-container img{width:200px;height:200px;object-fit:cover;border-radius:16px;box-shadow:0 6px 20px rgba(2,6,23,0.12)}
+    h1{margin:0;font-size:22px}
+    .subtitle{color:var(--muted);font-size:14px}
+    .meta{color:var(--muted);font-size:13px}
+
+    nav{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:10px}
+    .btn{background:transparent;border:1px solid rgba(15,23,42,0.08);padding:8px 12px;border-radius:10px;font-size:14px;cursor:pointer}
+    .download{display:inline-block;margin-top:8px;padding:10px 16px;border-radius:10px;background:var(--accent);color:white;text-decoration:none}
+
+    main{display:grid;grid-template-columns:1fr;gap:18px;margin-top:18px}
+    @media(min-width:960px){ main{grid-template-columns:1fr 340px} header{flex-direction:row;align-items:center} header > .info{margin-left:18px;text-align:left} }
+
+    section.card{background:var(--card);padding:18px;border-radius:var(--radius);box-shadow:0 6px 20px rgba(2,6,23,0.04)}
+    section.card h2{margin-top:0;margin-bottom:10px;color:#0b324f}
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .experience-item{margin-bottom:12px}
+    .experience-item h3{margin:0;font-size:15px}
+    .range{color:var(--muted);font-size:13px}
+    ul{margin:6px 0 0 18px;padding:0}
+    .skills{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+    .skill{background:#eef2ff;padding:6px 10px;border-radius:999px;font-size:13px}
+    .contact-list{display:flex;flex-direction:column;gap:8px}
+
+    footer{margin-top:20px;text-align:center;color:var(--muted);font-size:13px}
+
+    /* accessibility focus */
+    .btn:focus, .download:focus, a:focus { outline: 3px solid rgba(11,110,253,0.12); outline-offset:2px; }
+
+    /* small screens */
+    @media(max-width:600px){
+      .photo-container img{width:150px;height:150px}
+      header{padding:12px}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <header class="card" aria-label="Profile header">
+      <div style="display:flex;flex-direction:column;align-items:center;width:100%">
+        <!-- Centered photo -->
+        <div class="photo-container" aria-hidden="false">
+          <img src="enhanced_alexander_photo.png" alt="Alexander G. Gueñez">
+        </div>
+
+        <!-- Name + details -->
+        <div class="info" style="text-align:center;margin-top:8px">
+          <h1>Alexander G. Gueñez</h1>
+          <div class="subtitle">Sales Representative — Sales | Procurement | Account Management</div>
+          <div class="meta" style="margin-top:6px">Antipolo City, Rizal • +63 915 487 7873 • <a href="mailto:agguenez@gmail.com">agguenez@gmail.com</a></div>
+
+          <!-- Download resume -->
+          <div style="margin-top:12px">
+            <a class="download" href="RESUME - ALEXANDER G. GUENEZ - SALES REPRESENTATIVE.pdf" download>Download Resume (PDF)</a>
+          </div>
+
+          <!-- Nav -->
+          <nav aria-label="Primary navigation" style="margin-top:12px">
+            <button class="btn" onclick="scrollToId('about')">About</button>
+            <button class="btn" onclick="scrollToId('experience')">Experience</button>
+            <button class="btn" onclick="scrollToId('education')">Education</button>
+            <button class="btn" onclick="scrollToId('skills')">Skills</button>
+            <button class="btn" onclick="scrollToId('contact')">Contact</button>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Left column: content -->
+      <div>
+        <section id="about" class="card">
+          <h2>Objective</h2>
+          <p>To obtain a challenging position in a reputable organization where I can expand and utilize learning, knowledge, trainings and skills while making a significant contribution to the success of the company.</p>
+
+          <h2 style="margin-top:18px">About Me</h2>
+          <p>I am an experienced sales professional with local and international experience across the Philippines, Brunei, and Saudi Arabia. I specialize in sales, procurement, inventory management, public bidding, and client relationship management. I am dedicated, detail-oriented, and committed to providing excellent customer service.</p>
+        </section>
+
+        <section id="experience" class="card" aria-labelledby="exp-heading">
+          <h2 id="exp-heading">Work Experience</h2>
+
+          <div class="experience-item">
+            <h3>Purchasing Officer — 5N’s Generic Drugstore</h3>
+            <div class="range">August 2019 – December 2022</div>
+            <ul>
+              <li>Monitored stock and inventory; performed procurement from suppliers and dealers.</li>
+              <li>Analyzed fast-moving items to ensure timely procurement and availability.</li>
+            </ul>
+          </div>
+
+          <div class="experience-item">
+            <h3>Sales Executive — MeriJR Enterprises Incorporated</h3>
+            <div class="range">March 2015 – June 2019</div>
+            <ul>
+              <li>Offered medical equipment to assigned areas in NCR; handled private and government hospital accounts.</li>
+              <li>Participated in public bidding; provided full product range including accessories and consumables.</li>
+            </ul>
+          </div>
+
+          <div class="experience-item">
+            <h3>Sales Representative — Cezelion Trading, Est. (Riyadh, K.S.A.)</h3>
+            <div class="range">November 2012 – November 2014</div>
+            <ul>
+              <li>Sold medical equipment, consumables and disposable items to hospitals and clinics.</li>
+              <li>Managed inquiries, quotations and supplier sourcing to provide competitive offers.</li>
+            </ul>
+          </div>
+
+          <div class="experience-item">
+            <h3>Sales Coordinator — Silya Mesa Atbp Incorporated</h3>
+            <div class="range">April 2012 – September 2012</div>
+            <ul>
+              <li>Coordinated with existing clients, handled orders and sought new customers.</li>
+            </ul>
+          </div>
+
+          <div class="experience-item">
+            <h3>Secretary — Anwar Tiba Trading, Est. (Riyadh, K.S.A.)</h3>
+            <div class="range">May 2005 – December 2010</div>
+            <ul>
+              <li>Clerical tasks, business correspondence, invoicing, scheduling deliveries and coordination with government hospitals.</li>
+            </ul>
+          </div>
+
+          <div class="experience-item">
+            <h3>Sales Assistant — Sim Kim Huat Trading Co. Sdn. Bhd. (Brunei)</h3>
+            <div class="range">Dec 2003 – Jun 2004</div>
+            <ul>
+              <li>Storekeeping, restocking, inventory, and customer service in supermarket operations.</li>
+            </ul>
+          </div>
+
+          <div class="experience-item">
+            <h3>Computer Operator — Petron Corporation (Petron Gasul)</h3>
+            <div class="range">Jan 2000 – Jun 2003</div>
+            <ul>
+              <li>Created sales and marketing formats, supported promotional strategies, and performed data entry.</li>
+            </ul>
+          </div>
+
+          <div class="experience-item">
+            <h3>Maintenance Man — Mercury Drug Corporation</h3>
+            <div class="range">May 1996 – Jan 2000</div>
+            <ul>
+              <li>Store housekeeping, POS operations, basic maintenance, cashiering and customer service.</li>
+            </ul>
+          </div>
+
+          <div class="experience-item">
+            <h3>Data Entry & Encoder (Early roles)</h3>
+            <div class="range">1994 – 1996</div>
+            <ul>
+              <li>Data entry for Zuellig Pharma (OJT) and IMS Pacific Limited (summer job).</li>
+            </ul>
+          </div>
+        </section>
+
+        <section id="extras" class="card">
+          <h2>Trainings & Seminars</h2>
+          <ul>
+            <li>Basic Safety Course with Personal Safety & Social Responsibilities (BSC w/PSSR) — Magsaysay Training Center (July 27 – Aug 4, 2004)</li>
+            <li>Service Excellence Seminar — Mercury Group of Companies (May 20 – 24, 1996)</li>
+          </ul>
+        </section>
+      </div>
+
+      <!-- Right column: sidebar -->
+      <aside>
+        <section id="skills" class="card">
+          <h2>Core Skills</h2>
+          <div class="skills">
+            <div class="skill">Sales & Negotiation</div>
+            <div class="skill">Procurement & Inventory</div>
+            <div class="skill">Client Relations</div>
+            <div class="skill">Public Bidding & Proposals</div>
+            <div class="skill">MS Office & Data Entry</div>
+            <div class="skill">Driving (motorcycle, car, SUV, pick-up)</div>
+            <div class="skill">Troubleshooting</div>
+          </div>
+        </section>
+
+        <section id="education" class="card" style="margin-top:14px">
+          <h2>Education</h2>
+          <div style="margin-bottom:10px">
+            <strong>Associate Degree</strong><br>
+            Computer Programming in Business Systems — STI College (1993–1995), Major: COBOL
+          </div>
+          <div style="margin-bottom:10px">
+            <strong>College</strong><br>
+            B.S. Chemical Engineering — Technological Institute of the Philippines (1989–1993; 3rd Year)
+          </div>
+          <div>
+            <strong>Secondary</strong><br>
+            Marikina High School (1985–1989)
+          </div>
+        </section>
+
+        <section id="contact" class="card" style="margin-top:14px">
+          <h2>Contact</h2>
+          <div class="contact-list">
+            <div><strong>Address</strong><br>No. 27 Saint Vincent Street, Milagros Estate Subdivision, Barangay Dalig, Antipolo City 1870, Rizal, Philippines</div>
+            <div><strong>Phone</strong><br>+63 915 487 7873</div>
+            <div><strong>Email</strong><br><a href="mailto:agguenez@gmail.com">agguenez@gmail.com</a></div>
+            <div style="margin-top:8px"><a class="btn" href="mailto:agguenez@gmail.com">Email Me</a></div>
+          </div>
+        </section>
+
+        <section class="card" style="margin-top:14px">
+          <h2>Download</h2>
+          <p class="meta" style="margin:0 0 8px 0">Printable copy of this resume</p>
+          <a class="download" href="RESUME - ALEXANDER G. GUENEZ - SALES REPRESENTATIVE.pdf" download>Download PDF</a>
+        </section>
+      </aside>
+    </main>
+
+    <footer>
+      © 2025 Alexander G. Gueñez — Built with care
+    </footer>
+  </div>
+
+  <script>
+    function scrollToId(id){
+      const el = document.getElementById(id);
+      if(!el) return;
+      el.scrollIntoView({behavior:'smooth', block:'start'});
+      // Add small offset for sticky header if needed in future
+    }
+  </script>
+</body>
+</html>
